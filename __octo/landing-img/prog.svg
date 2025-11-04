@@ -1,0 +1,63 @@
+<svg width="383" height="186" viewBox="0 0 383 186" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background blur container -->
+  <foreignObject x="-3.5" y="-4" width="390" height="194">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(2px);clip-path:url(#bgblur_0_66_33_clip_path);height:100%;width:100%"></div>
+  </foreignObject>
+
+  <g filter="url(#filter0_iii_66_33)" data-figma-bg-blur-radius="4">
+    <rect x="0.5" width="382" height="186" rx="16" fill="white" fill-opacity="0.2"/>
+
+    <!-- Title -->
+    <text x="24" y="35" fill="white" font-size="15" font-family="Arial, sans-serif" font-weight="600">
+      Progress
+    </text>
+
+    <!-- Percentage pill -->
+    <g>
+      <rect x="306.5" y="16" width="54" height="26" rx="8" fill="white" fill-opacity="0.2"/>
+      <text x="320" y="33" fill="white" font-size="13" font-family="Arial, sans-serif" font-weight="600">
+        +30%
+      </text>
+    </g>
+
+    <!-- Y-axis labels -->
+    <text x="24" y="76"  fill="white" fill-opacity="0.9" font-size="12" font-family="Arial, sans-serif">70k</text>
+    <text x="24" y="106" fill="white" fill-opacity="0.9" font-size="12" font-family="Arial, sans-serif">60k</text>
+    <text x="24" y="136" fill="white" fill-opacity="0.9" font-size="12" font-family="Arial, sans-serif">50k</text>
+    <text x="24" y="166" fill="white" fill-opacity="0.9" font-size="12" font-family="Arial, sans-serif">40k</text>
+
+    <!-- ✅ Animated progress line -->
+    <path
+      d="M78 163L79.6 155.021C81.2 147.043 84.4 131.085 87.6 130.124C90.8 129.162 94 143.196 97.2 142.011C100.4 140.826 103.6 124.422 106.8 123.398C110 122.373 113.2 136.729 116.4 139.704C119.6 142.68 122.8 134.275 126 125.342C129.2 116.409 132.4 106.948 135.6 104.862C138.8 102.777 142 108.067 145.2 108.304C148.4 108.542 151.6 103.727 154.8 104.06C158 104.394 161.2 109.876 164.4 108.118C167.6 106.36 170.8 97.3624 174 93.7423C177.2 90.1223 180.4 91.8801 183.6 98.9851C186.8 106.09 190 118.542 193.2 124.548C196.4 130.555 199.6 130.115 202.8 128.106C206 126.096 209.2 122.517 212.4 123.511C215.6 124.506 218.8 130.076 222 127.133C225.2 124.191 228.4 112.736 231.6 104.641C234.8 96.5466 238 91.8115 241.2 92.7887C244.4 93.7659 247.6 100.455 250.8 101.932C254 103.409 257.2 99.6725 260.4 93.815C263.6 87.9575 266.8 79.9788 268.4 75.9894L270 72"
+      stroke="white"
+      stroke-width="2"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+      <animate
+        attributeName="stroke-dasharray"
+        from="0,1000"
+        to="1000,0"
+        dur="3s"
+        repeatCount="indefinite"
+      />
+    </path>
+
+    <!-- Grid lines (rounded ends) -->
+    <line x1="54.5" y1="162.5" x2="360.5" y2="162.5" stroke="white" stroke-opacity="0.4" stroke-linecap="round"/>
+    <line x1="53.5" y1="132.5" x2="359.5" y2="132.5" stroke="white" stroke-opacity="0.4" stroke-linecap="round"/>
+    <line x1="54.5" y1="102.5" x2="360.5" y2="102.5" stroke="white" stroke-opacity="0.4" stroke-linecap="round"/>
+    <line x1="53.5" y1="72.5"  x2="359.5" y2="72.5"  stroke="white" stroke-opacity="0.4" stroke-linecap="round"/>
+  </g>
+
+  <defs>
+    <filter id="filter0_iii_66_33" x="-3.5" y="-4" width="390" height="194" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+    </filter>
+
+    <clipPath id="bgblur_0_66_33_clip_path" transform="translate(3.5 4)">
+      <rect x="0.5" width="382" height="186" rx="16"/>
+    </clipPath>
+  </defs>
+</svg>

@@ -1,0 +1,131 @@
+/* ==========================================
+   THEME SYSTEM – Add class to <body>
+   Example: <body class="theme-midnight">
+========================================== */
+
+/* Base reset for text colors and backgrounds */
+body {
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+/* ===== 1. MIDNIGHT THEME (default soft dark) ===== */
+.theme-midnight {
+  background: radial-gradient(circle at 20% 20%, #121820 0%, #0f141a 60%, #0a0e13 100%);
+  color: rgba(232, 238, 244, 0.92);
+}
+
+.theme-midnight h1, 
+.theme-midnight h2, 
+.theme-midnight h3, 
+.theme-midnight h4 {
+  color: #f2f6fa;
+}
+
+.theme-midnight p, 
+.theme-midnight span, 
+.theme-midnight a {
+  color: rgba(232, 238, 244, 0.88);
+}
+
+.theme-midnight .cta {
+  background: linear-gradient(90deg, #df0b09, #7d0e0d);
+  color: #fff;
+}
+
+/* ===== 2. SUNSET THEME (warm reddish beige) ===== */
+.theme-sunset {
+  background: radial-gradient(circle at 30% 40%, #f8c8c2, #f3d7c1, #f6b1a2 80%);
+  color: rgba(40, 20, 10, 0.92);
+}
+
+.theme-sunset h1, 
+.theme-sunset h2, 
+.theme-sunset h3 {
+  background: linear-gradient(90deg, #5f0000, #b21e1e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.theme-sunset p, 
+.theme-sunset a {
+  color: rgba(50, 25, 10, 0.85);
+}
+
+.theme-sunset .cta {
+  background: linear-gradient(90deg, #b21e1e, #df0b09);
+  color: #fff;
+}
+
+/* ===== 3. GLACIER THEME (cool icy blue) ===== */
+.theme-glacier {
+  background: radial-gradient(circle at 60% 50%, #c3d9f6, #a4c3e2, #7ea6cf 90%);
+  color: rgba(15, 25, 40, 0.9);
+}
+
+.theme-glacier h1, 
+.theme-glacier h2, 
+.theme-glacier h3 {
+  background: linear-gradient(90deg, #10283d, #537aa6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.theme-glacier p, 
+.theme-glacier a {
+  color: rgba(15, 25, 40, 0.8);
+}
+
+.theme-glacier .cta {
+  background: linear-gradient(90deg, #2f5c89, #5a9bda);
+  color: #fff;
+}
+
+/* ===== 4. BEIGE THEME (soft minimal light) ===== */
+.theme-beige {
+  background: radial-gradient(circle at 40% 50%, #fef9f4, #f8f1e9, #f2e6d7 90%);
+  color: rgba(50, 35, 20, 0.92);
+}
+
+.theme-beige h1, 
+.theme-beige h2, 
+.theme-beige h3 {
+  background: linear-gradient(90deg, #7d5540, #b7835a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.theme-beige p, 
+.theme-beige a {
+  color: rgba(60, 45, 30, 0.85) !important;
+}
+
+.theme-beige .cta {
+  background: linear-gradient(90deg, #b7835a, #dfae7d);
+  color: #fff;
+}
+
+/* ===== 5. FOREST THEME (deep green calm) ===== */
+.theme-forest {
+  background: radial-gradient(circle at 20% 40%, #11231c, #0c1a15, #06120e 90%);
+  color: rgba(226, 236, 228, 0.9);
+}
+
+.theme-forest h1, 
+.theme-forest h2, 
+.theme-forest h3 {
+  background: linear-gradient(90deg, #b2f0c8, #56c07b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.theme-forest p, 
+.theme-forest a {
+  color: rgba(230, 240, 235, 0.8) !important;
+}
+
+.theme-forest .cta {
+  background: linear-gradient(90deg, #1e5a3c, #2e8b57);
+  color: #fff;
+}
+
+
