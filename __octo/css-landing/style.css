@@ -141,37 +141,20 @@ button:hover {
 /* header starts */
 
 .header {
-  /* Base desktop styles */
+  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.6vw 3vw; /* comfortable height on desktop */
+  padding: 0.8vw 3vw;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 99999;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px) saturate(160%);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-
-  /* For debugging (optional) */
-  /* border: 1px solid red; */
-}
-
-/* Reduce height on tablets */
-@media (max-width: 1024px) {
-  .header {
-    padding: 0.8rem 2rem; /* smaller height */
-  }
-}
-
-/* Further reduce on mobile */
-@media (max-width: 600px) {
-  .header {
-    padding: 0.6rem 1.5rem; /* slim header for phones */
-  }
+  z-index: 99999;
 }
 
 .header .logo {
@@ -331,7 +314,6 @@ button:hover {
 /* launch starts */
 
 .launch {
-  /* border: 1px solid red; */
   padding: 5.5vw;
   justify-content: space-between;
 }
@@ -365,14 +347,12 @@ button:hover {
 }
 
 .launch .items {
-  /* border: 1px solid blue; */
   margin-top: 3vw;
   display: flex;
   gap: 3vw;
 }
 
 .launch .item {
-  /* border: 1px solid black; */
   padding: 1.5vw;
   gap: 0.7vw;
   background: #fff3f3;
@@ -384,7 +364,6 @@ button:hover {
 }
 
 .launch .item:nth-child(2) {
-  /* border: 1px solid green; */
   /* padding: 5.5vw; */
   background: #fffae6;
 }
@@ -395,7 +374,6 @@ button:hover {
 }
 
 .launch .items .num {
-  /* border: 1px solid green; */
   display: block;
   color: #fff;
   font-family: Satoshi;
@@ -426,128 +404,119 @@ button:hover {
 
 .audience {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: wrap; /* allow wrapping on smaller screens */
-  padding: 5.5vw;
-  gap: 4vw;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2.5vw 3.5vw; /* reduced further */
+  gap: 2.5vw; /* tighter gap */
+  position: relative;
+  /* border: 1px solid green; */
+  height: auto;
+  margin-bottom: 2vw;
 }
 
-/* LEFT SECTION */
+/* ===== LEFT SIDE ===== */
 .audience .left {
+  width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 2vw;
-  width: 40%;
-  min-width: 320px;
+  gap: 1vw; /* reduced */
 }
 
 .audience .left p {
   color: #000;
   font-family: Satoshi, sans-serif;
-  font-size: 1.25rem;
-  font-weight: 200;
+  font-size: 1.15rem;
+  font-weight: 300;
   line-height: 1.4;
   letter-spacing: -0.5px;
 }
 
 .audience .left .cta {
-  margin-top: auto;
+  margin-top: 0.5vw;
 }
 
-/* RIGHT SECTION */
+/* ===== RIGHT SIDE ===== */
 .audience .right {
+  width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 2vw;
-  width: 50%;
-  min-width: 320px;
+  gap: 1.2vw; /* tighter card spacing */
 }
 
-/* CARD STYLE */
 .audience .right .item {
   border-radius: 20px;
   border: 3px solid #ffaba9;
   background: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 2vw;
+  box-shadow: none;
+  padding: 1.2vw; /* smaller inner padding */
   width: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.audience .right .item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* TEXT INSIDE CARDS */
 .audience .right .item h3 {
   color: #920e0b;
   font-family: Satoshi, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4vw;
 }
 
 .audience .right .item p {
   color: #920e0b;
   font-family: Satoshi, sans-serif;
-  font-size: 1.1rem;
-  font-weight: 200;
-  line-height: 1.3;
-  letter-spacing: -0.5px;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.4;
 }
 
-/* ===== RESPONSIVENESS ===== */
+/* =========================== */
+/* ✅ Responsive Adjustments */
+/* =========================== */
 
-/* Tablets */
 @media (max-width: 1024px) {
   .audience {
     flex-direction: column;
     align-items: center;
-    gap: 6vw;
+    text-align: center;
+    padding: 4vw 3.5vw; /* tighter on tablet */
+    gap: 3.5vw;
   }
 
   .audience .left,
   .audience .right {
     width: 100%;
-    margin: 0;
   }
 
   .audience .right {
-    flex-direction: column;
-    align-items: center;
-    gap: 4vw;
+    margin-top: 3vw;
   }
 
   .audience .right .item {
-    width: 90%;
-    padding: 4vw;
+    padding: 3.5vw;
   }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
   .audience {
-    padding: 10vw 5vw;
+    padding: 5vw 3.5vw; /* tighter on mobile */
+    gap: 3.5vw;
   }
 
   .audience .left p {
-    font-size: 1rem;
-    line-height: 1.4;
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   .audience .right .item {
-    width: 100%;
-    padding: 6vw;
+    padding: 3.8vw;
   }
 
   .audience .right .item h3 {
-    font-size: 1.1rem;
+    font-size: 17px;
   }
 
   .audience .right .item p {
-    font-size: 0.95rem;
+    font-size: 14px;
   }
 }
 
@@ -556,11 +525,13 @@ button:hover {
 /* features starts */
 
 .features {
+  /* border: 1px solid black; */
   display: flex;
   width: 100%;
   padding: 5.5vw;
   width: 99%;
   justify-content: space-between;
+  margin-top: 0;
 }
 
 .features .texts {
@@ -972,9 +943,10 @@ button:hover {
 /* footer starts */
 
 .footer {
-  padding: 2.5vw 5.5vw;
+  /* border: 1px solid red; */
+  padding: 1vw 5.5vw;
   background: #1e1e1e;
-  height: 50vh;
+  /* height: 50vh; */
   gap: 25px;
   justify-content: space-between;
 }
@@ -982,7 +954,7 @@ button:hover {
 .footer .top {
   display: flex;
   justify-content: space-between;
-  margin-top: 3vw;
+  margin-top: 2vw;
 }
 
 .footer .socials {
@@ -1073,10 +1045,6 @@ button:hover {
 /* timer ends */
 
 /* red-beige starts */
-.audience {
-  position: relative;
-  padding-bottom: 6.5vw;
-}
 
 .red-beige {
   position: absolute;

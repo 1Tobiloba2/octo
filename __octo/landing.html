@@ -31,14 +31,13 @@
         </nav>
         <!-- mobile link starts -->
         <div class="mobile_link">
-  <div class="links">
-    <a href="#" class="link active">Home</a>
-    <a href="#" class="link">How it works</a>
-    <a href="#" class="link">Features</a>
-    <a href="#" class="link">FAQs</a>
-  </div>
-</div>
-
+            <div class="links">
+                <a href="#" class="link active">Home</a>
+                <a href="#" class="link">How it works</a>
+                <a href="#" class="link">Features</a>
+                <a href="#" class="link">FAQs</a>
+            </div>
+        </div>
         <!-- mobile link ends -->
         <!-- banner starts -->
         <section class="banner">
@@ -82,7 +81,6 @@
                     <a href="#" class="cta">Get Started <img src="landing-img/arrow_right.svg" alt=""></a>
                 </div>
             </div>
-
             <div class="items">
                 <div class="item fd">
                     <span class="num">1</span>
@@ -103,7 +101,6 @@
                     <img src="landing-img/phone1.png" alt="">
                 </div>
             </div>
-            
         </section>
         <!-- launch ends -->
         <section class="audience">
@@ -157,7 +154,7 @@
                 <div class="item fd">
                     <h3>Turn hours of work into minutes.</h3>
                     <p>No more web agencies, delays, or templates that don’t fit. Octopus V does the heavy lifting.</p>
-                    <div class="timer-container" id="timer">30:00</div>
+                    <div class="timer-container" id="timer">00:30</div>
                 </div>
                 <div class="item fd">
                     <h3>Designed to Grow With You.</h3>
@@ -300,37 +297,44 @@
         }
         });
     </script>
-    <script>
-        let totalSeconds = 30 * 60; // 30 minutes
-        let started = false; // prevents restarting multiple times
 
-        function updateTimer() {
-            const minutes = Math.floor(totalSeconds / 60);
-            const seconds = totalSeconds % 60;
-            document.getElementById("timer").textContent =
+  <script>
+    let totalSeconds = 30; // 30 seconds
+    let started = false; // prevents restarting multiple times
+
+    function updateTimer() {
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        document.getElementById("timer").textContent =
             String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
 
-            if (totalSeconds > 0) {
+        if (totalSeconds > 0) {
             totalSeconds--;
             setTimeout(updateTimer, 1000);
-            }
+        } else {
+            // Restart immediately when it ends
+            totalSeconds = 30;
+            updateTimer();
         }
+    }
 
-        // Use Intersection Observer to trigger timer when visible
-        const timerElement = document.getElementById("timer");
+    // Use Intersection Observer to trigger timer when visible
+    const timerElement = document.getElementById("timer");
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
             if (entry.isIntersecting && !started) {
                 started = true;
                 timerElement.classList.add('visible');
                 updateTimer();
             }
-            });
-        }, { threshold: 0.5 });
+        });
+    }, { threshold: 0.5 });
 
-        observer.observe(timerElement);
-    </script>
+    observer.observe(timerElement);
+</script>
+
+
     <script>
         const faqItems = document.querySelectorAll('.faqs .items .item');
 
